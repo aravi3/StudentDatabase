@@ -1,10 +1,9 @@
 public class StudentDatabaseApp {
     public static void main(String[] args) {
         // Ask how many users we want to add
-        // System.out.print("Enter number of new students to enroll: ");
-        // Scanner in = new Scanner(System.in);
-        // int numOfStudents = in.nextInt();
-        int numOfStudents = 2;
+        System.out.print("Enter number of new students to enroll: ");
+        Scanner in = new Scanner(System.in);
+        int numOfStudents = in.nextInt();
         Student[] students = new Student[numOfStudents];
 
         // Create n number of new students

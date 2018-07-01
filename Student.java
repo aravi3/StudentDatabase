@@ -10,18 +10,15 @@ public class Student {
 
     // Constructor: prompt user to enter student's name and year
     public Student() {
-        // Scanner in = new Scanner(System.in);
-        // System.out.print("Enter student first name: ");
-        // this.firstName = in.nextLine();
-        this.firstName = "Arvind";
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter student first name: ");
+        this.firstName = in.nextLine();
 
-        // System.out.print("Enter student last name: ");
-        // this.lastName = in.nextLine();
-        this.lastName = "Ravi";
+        System.out.print("Enter student last name: ");
+        this.lastName = in.nextLine();
 
-        // System.out.print("1 - Freshmen\n2 - Sophomore\n3 - Junior\n4 - Senior\nEnter student class level: ");
-        // this.gradeYear = in.nextInt();
-        this.gradeYear = 4;
+        System.out.print("1 - Freshmen\n2 - Sophomore\n3 - Junior\n4 - Senior\nEnter student class level: ");
+        this.gradeYear = in.nextInt();
 
         setStudentID();
     }
@@ -38,9 +35,9 @@ public class Student {
         // Get inside a loop, user hits 0
         while(true) {
             System.out.println("Enter course to enroll (Q to quit): ");
-            // Scanner in = new Scanner(System.in);
-            // String course = in.nextLine();
-            String course = "Q";
+            Scanner in = new Scanner(System.in);
+            String course = in.nextLine();
+
             if (!course.equals("Q")) {
                 courses = courses + "\n " + course;
                 tuitionBalance = tuitionBalance + costOfCourse;
@@ -58,10 +55,10 @@ public class Student {
     // Pay tuition
     public void payTuition() {
         viewBalance();
-        // System.out.print("Enter your payment: $");
-        // Scanner in = new Scanner(System.in);
-        // int payment = in.nextInt();
-        int payment = 500;
+        System.out.print("Enter your payment: $");
+        Scanner in = new Scanner(System.in);
+        int payment = in.nextInt();
+        
         tuitionBalance = tuitionBalance - payment;
         System.out.println("Thank you for your payment of: $" + payment);
         viewBalance();
